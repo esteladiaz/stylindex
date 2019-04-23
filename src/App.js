@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css'
 import ApolloClient from 'apollo-boost'
 import { ApolloProvider } from 'react-apollo'
+import Pokemon from './Components/Pokemon'
 
 const client = new ApolloClient({
   uri: 'https://graphql-pokemon.now.sh/'
@@ -10,7 +11,7 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <div>Instantiating new client</div>
+      <Pokemon />
   </ApolloProvider>
   )
 }
