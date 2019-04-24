@@ -3,7 +3,7 @@ import gql from 'graphql-tag'
 
 export const pokemonQuery = gql`
 	{
-		pokemons(first: 10) {
+		pokemons(first: 151) {
 			id
 			number
 			name
