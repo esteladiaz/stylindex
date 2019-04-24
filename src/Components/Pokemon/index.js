@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Query } from 'react-apollo'
 import {
-	Container
+  Container,
+PokemonCardWrapper  
 } from './style'
 import { pokemonQuery } from '../../functions'
 import PokemonCard from '../PokemonCard'
@@ -19,7 +20,9 @@ export default class Pokemon extends Component {
               <h1>Gotta catch 'em all!</h1>
               <p>Click on a card for more information.</p>
               <p>To exit card, click overlay or press <code>ESC</code></p>
-              {pokemons.map((pokemon, idx) => <PokemonCard key={idx} pokemon={pokemon} />)}
+              <PokemonCardWrapper>
+                {pokemons.map((pokemon, idx) => <PokemonCard key={idx} pokemon={pokemon} />)}
+              </PokemonCardWrapper>
             </Container>
             )
 					}}

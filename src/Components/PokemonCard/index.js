@@ -1,6 +1,8 @@
 import React from 'react'
 import {
-  PokemonCard
+  PokemonCard,
+  PokemonCardImage,
+  PokemonCardInformation
 } from './style'
 
 export default function(props) {
@@ -9,11 +11,15 @@ export default function(props) {
 
   return (
     <PokemonCard pokemonTypes={types} onClick={onClick}>
-        <img src={image} alt=""/>
-        <h2 title={`id: ${id}`}>{name}</h2>
-        <h3>{number}</h3>
-        <p><strong>Max HP:</strong> {maxHP}</p>
-        <p><strong>Max CP:</strong> {maxCP}</p>
+        <PokemonCardImage>
+        <img src={image} alt={name} />
+        </PokemonCardImage>
+        <PokemonCardInformation>
+          <h2 title={`id: ${id}`}>{name}</h2>
+          <h3>{number}</h3>
+          <p><strong>Max HP:</strong> {maxHP}</p>
+          <p><strong>Max CP:</strong> {maxCP}</p>
+        </PokemonCardInformation>
     </PokemonCard>
   )
 }

@@ -1,11 +1,9 @@
 export const breakpoints = {
-  desktopMin: '1101px',
-  desktopXsMax: '1100px',
-  desktopXsMin: '1024px',
+  desktopMin: '1024px',
   tabletMax: '1023px',
   tabletMin: '600px',
   mobileMax:'599px',
-  mobileXsMax: '350px'
+  mobileXsMax: '380px'
 }
 
 export const colors = {
