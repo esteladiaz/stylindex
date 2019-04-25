@@ -1,6 +1,7 @@
 import React from 'react'
 import ApolloClient from 'apollo-boost'
 import { ApolloProvider } from 'react-apollo'
+import { ModalProvider } from 'styled-react-modal'
 import Pokemon from './Components/Pokemon'
 
 const client = new ApolloClient({
@@ -10,7 +11,9 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <Pokemon />
+      <ModalProvider>
+        <Pokemon />
+      </ModalProvider>
   </ApolloProvider>
   )
 }
