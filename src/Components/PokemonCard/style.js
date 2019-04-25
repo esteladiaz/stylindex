@@ -4,7 +4,7 @@ import { breakpoints, colors } from '../../variables'
 const pokemonCardBreakpoints = css`
   @media (min-width: ${breakpoints.desktopMin}) {
     border: 1px solid ${colors.lightGrey};
-    margin: 1rem;
+    margin: 1.25rem;
     width: calc((100% / 4) - 4rem);
     &:nth-child(4n + 1) {
       margin-left: 0;
