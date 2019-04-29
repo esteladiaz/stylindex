@@ -2,8 +2,8 @@ import styled, { css } from 'styled-components'
 import { breakpoints, colors } from '../../variables'
 
 const pokemonCardBreakpoints = css`
+  border: 1px solid ${colors.lightGrey};
   @media (min-width: ${breakpoints.desktopMin}) {
-    border: 1px solid ${colors.lightGrey};
     margin: 1.25rem;
     width: calc((100% / 4) - 4rem);
     &:nth-child(4n + 1) {
@@ -14,8 +14,8 @@ const pokemonCardBreakpoints = css`
     }
   }
   @media (min-width: ${breakpoints.tabletMin}) and (max-width: ${breakpoints.tabletMax}) {
-    margin: 1rem 0.56rem;
-    width: calc((100% / 3) - 1rem);
+    margin: 1rem 0.64rem;
+    width: calc((100% / 3) - 3rem);
     &:nth-child(3n + 1) {
       margin-left: 0;
     }
@@ -24,7 +24,7 @@ const pokemonCardBreakpoints = css`
     }
   }
   @media (min-width: ${breakpoints.mobileXsMax}) and (max-width: ${breakpoints.mobileMax}) {
-    width: calc((100% / 2) - 0.5rem);
+    width: calc((100% / 2) - 2.38rem);
     margin-bottom: 1rem;
     &:nth-child(odd) {
       margin-right: 0.5rem;
