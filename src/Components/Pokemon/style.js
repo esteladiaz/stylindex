@@ -23,10 +23,13 @@ export const HeaderText = styled.div`
 `
 
 export const Logo = styled.img`
+  margin-bottom: 1rem;
   @media (min-width:${breakpoints.tabletMin}) {
     width: 400px;
-    margin-bottom: 1rem;
-  })
+  }
+  @media (max-width:${breakpoints.mobileMax}) {
+    width: 200px;
+  }
 `
 
 export const SelectedPokemonWrapper = Modal.styled`
