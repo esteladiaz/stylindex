@@ -66,17 +66,18 @@ export const PokemonCardHeaderInfo = styled.div`
 export const PokemonImageAndInfo = styled.div`
   display: flex;
   flex-flow: column wrap;
-  height: 120px;
+  height: 70px;
   margin-top: 1rem;
   width: 100%;
   img {
-    height: 40%;
     left: 20%;
     position: relative;
+    width: 100%;
   }
 `
 
 export const PokemonImageContainer = styled.div`
+  height: 100%;
   width: 50%;
 `
 
@@ -87,7 +88,6 @@ export const TypeColorContainer = styled.div`
   flex-flow: row wrap;
   position: relative;
   text-align: center;
-  width: 50%;
 `
 
 export const TypeColor = styled.div.attrs(({ pokemonType }) => {
