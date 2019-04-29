@@ -11,6 +11,7 @@ export default class Pokemon extends Component {
 		super(props);
 
 		this.state = {
+			pokemonCards: null,
 			selectedPokemon: null,
 			showModal: false
 		};
@@ -22,7 +23,37 @@ export default class Pokemon extends Component {
 			showModal: !showModal,
 			selectedPokemon: pokemon
 		});
-	};
+	}
+
+	getPokemonCards = (pokemons) => {
+		const { pokemonCards } = this.state
+
+		if (pokemonCards) {
+			return pokemonCards.map((pokemon, idx) => (
+				<PokemonCard
+					key={idx}
+					pokemon={pokemon}
+					onClick={() => this.toggleModal(pokemon)}
+				/>
+			))
+		} else {
+			return pokemons.map((pokemon, idx) => (
+				<PokemonCard
+					key={idx}
+					pokemon={pokemon}
+					onClick={() => this.toggleModal(pokemon)}
+				/>
+			)) 
+
+		}
+	}
+
+	// filterPokemon = (e, pokemons) => {
+	// 	console.log(e.target.value, "VALUE")
+	// 	let regex = new RegExp(e.target.value, 'gi')
+	// 	let filteredPokemon = pokemons.filter(pokemon => pokemon.name.match(regex))
+	// 	this.setState({pokemonCards: filteredPokemon})
+	// }
 
 	render() {
 		const { selectedPokemon, showModal } = this.state;
@@ -43,15 +74,10 @@ export default class Pokemon extends Component {
 								<p>
 									To exit card, click overlay or press <code>ESC</code>
 								</p>
+							{/* <input type="text" placeholder="Search pokemon" onChange={e => this.filterPokemon(e, pokemons)} /> */}
 							</HeaderText>
 							<PokemonCardWrapper>
-								{pokemons.map((pokemon, idx) => (
-									<PokemonCard
-										key={idx}
-										pokemon={pokemon}
-										onClick={() => this.toggleModal(pokemon)}
-									/>
-								))}
+								{this.getPokemonCards(pokemons)}
 							</PokemonCardWrapper>
 							{selectedPokemon &&
 								<SelectedPokemonWrapper
