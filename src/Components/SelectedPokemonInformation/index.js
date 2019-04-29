@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { EvolutionImage, EvolutionsWrapper, InformationWrapper, SelectedPokemonInformation } from './style'
-import  { TypeColor, TypeColorContainer } from '../PokemonCard/style'
+import  { TypeColor, TypeColorContainer } from './style'
 
 
 export default function(props) {
